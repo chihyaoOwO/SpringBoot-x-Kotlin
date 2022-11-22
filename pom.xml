@@ -16,12 +16,32 @@
     <properties>
         <java.version>1.8</java.version>
         <kotlin.version>1.6.21</kotlin.version>
+        <arraw.version>1.1.2</arraw.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+        <!--    Arrow    -->
+        <dependency>
+            <groupId>io.arrow-kt</groupId>
+            <artifactId>arrow-fx-coroutines-jvm</artifactId>
+            <version>${arraw.version}</version>
+        </dependency>
+        <!--    coroutines    -->
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-reactor</artifactId>
+            <version>1.6.3</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--    use Kotlin kotlin-reflect & kotlin-stdlib-jdk8 = jackson-modules-kotlin  -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
@@ -30,9 +50,10 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
         </dependency>
+        <!--    object mapper    -->
         <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-reflect</artifactId>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
